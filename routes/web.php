@@ -40,3 +40,12 @@ Route::post('backend/laporan/cetakproduk', [ProdukController::class, 'cetakProdu
  
 // Frontend 
 Route::get('/beranda', [BerandaController::class, 'index'])->name('beranda'); 
+
+Route::get('/produk/detail/{id}', [ProdukController::class, 'detail'])
+->name('produk.detail');
+
+Route::get('/produk/kategori/{id}', [ProdukController::class, 
+'produkKategori'])->name('produk.kategori');
+
+Route::get('/produk/all', [ProdukController::class, 'produkAll'])
+->name('produk.all');

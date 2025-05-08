@@ -10,7 +10,7 @@
         <!-- Product Single --> 
         <div class="col-md-4 col-sm-6 col-xs-6"> 
             <div class="product product-single"> 
-                <div class="product-thumb"> 
+                <div class="product-thumb">
                     <div class="product-label"> 
                         <span>Kategori</span> 
                         <span class="sale">{{ $row->kategori->nama_kategori }}</span> 
@@ -31,7 +31,8 @@ alt="">
  
                     <h2 class="product-name"><a href="#">{{ $row->nama_produk }}</a></h2> 
                     <div class="product-btns"> 
-                        <a href="#" title="Detail Produk"> 
+                        <a href="{{ route('produk.detail', $row->id) }}" title="Detail 
+Produk"> 
                             <button class="main-btn icon-btn"><i class="fa fa-search
 plus"></i></button> 
                         </a> 
@@ -39,19 +40,19 @@ plus"></i></button>
                             style="display: inline-block;" title="Pesan Ke Aplikasi"> 
                             @csrf 
                             <button type="submit" class="primary-btn add-to-cart"><i 
-                                    class="fa fa-shopping-cart"></i> Pesan</button>
-                                </form> 
-                            </div> 
-                        </div> 
+                                    class="fa fa-shopping-cart"></i> Pesan</button> 
+                        </form> 
                     </div> 
                 </div> 
-                <!-- /Product Single --> 
-                @endforeach 
-                <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div> 
             </div> 
-            <!-- /row --> 
         </div> 
-        <!-- /STORE --> 
-         
-        <!-- end template--> 
-        @endsection
+        <!-- /Product Single --> 
+        @endforeach 
+        <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div> 
+    </div> 
+    <!-- /row --> 
+</div> 
+<!-- /STORE --> 
+ 
+<!-- end template--> 
+@endsection
